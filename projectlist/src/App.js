@@ -4,8 +4,8 @@
 
 function App() {
   let cnt = 0;
-  let width = 512;
-  let height = 238;
+  let width = 512*1.5;
+  let height = 238*1.5;
   let arr = [];
   for (let i = 0; i <= 20; i++) {
     arr[i] = i;
@@ -29,11 +29,10 @@ function App() {
         return (
           <div
             key={el}
-            className="cards"
+            className="cards relative rounded-3xl"
             style={{
               width: `${width}px`,
               height: `${height}px`,
-              position: "relative",
               left: `${width * cnt++}px`,
               transform: "translate(",
               backgroundColor: `rgb(${Math.floor(
@@ -41,7 +40,6 @@ function App() {
               )} ${Math.floor(Math.random() * 255)} ${Math.floor(
                 Math.random() * 255
               )})`
-              // top: "40px"
             }}
           >
             hello {el}
