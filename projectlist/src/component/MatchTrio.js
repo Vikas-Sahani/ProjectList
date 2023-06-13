@@ -21,7 +21,7 @@ import MTPage12 from "../images/MatchTrioImages/Page12.png";
 
 
 function Slides(props) {
-  const slides = [{url: MTPage1},{url: MTPage2},{url: MTPage3},{url: MTPage4},{url: MTPage5},{url: MTPage6},{url: MTPage7},{url: MTPage8},{url: MTPage9},{url: MTPage10},{url: MTPage11},{url: MTPage12}];
+  const slides =[{url: MTPage1},{url: MTPage2},{url: MTPage3},{url: MTPage4},{url: MTPage5},{url: MTPage6},{url: MTPage7},{url: MTPage8},{url: MTPage9},{url: MTPage10},{url: MTPage11},{url: MTPage12}];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -44,7 +44,10 @@ function Slides(props) {
   return (
     <div className='max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group' style={props.styleObj}>
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+        style={{ backgroundImage: `url(${ 
+          slides[currentIndex].url
+          
+        })` }}
         className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}

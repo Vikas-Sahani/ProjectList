@@ -3,6 +3,25 @@ import MatchTrio from "./component/MatchTrio";
 import CandyCrush from "./component/CandyCrush";
 
 
+import candyPage1 from "./images/CandyCrushImages/Page1.png";
+import candyPage2 from "./images/CandyCrushImages/Page2.png";
+import candyPage3 from "./images/CandyCrushImages/Page3.png";
+import candyPage4 from "./images/CandyCrushImages/Page4.png";
+
+// MT => Match-Trio
+import MTPage1 from "./images/MatchTrioImages/Page1.png";
+import MTPage2 from "./images/MatchTrioImages/Page2.png";
+import MTPage3 from "./images/MatchTrioImages/Page3.png";
+import MTPage4 from "./images/MatchTrioImages/Page4.png";
+import MTPage5 from "./images/MatchTrioImages/Page5.png";
+import MTPage6 from "./images/MatchTrioImages/Page6.png";
+import MTPage7 from "./images/MatchTrioImages/Page7.png";
+import MTPage8 from "./images/MatchTrioImages/Page8.png";
+import MTPage9 from "./images/MatchTrioImages/Page9.png";
+import MTPage10 from "./images/MatchTrioImages/Page10.png";
+import MTPage11 from "./images/MatchTrioImages/Page11.png";
+import MTPage12 from "./images/MatchTrioImages/Page12.png";
+
 // for laptop devices
 // console.log(window.innerHeight=714+" "+window.innerWidth=1536)
 
@@ -10,7 +29,12 @@ function App() {
   let cnt = 0;
   let width = 500*1.5;
   let height = 230*1.5;
-  let arr = [MatchTrio, CandyCrush];
+  const projectArr = [CandyCrush, MatchTrio ];
+  const projectObj = [{
+    MatchTrio:[{url: MTPage1},{url: MTPage2},{url: MTPage3},{url: MTPage4},{url: MTPage5},{url: MTPage6},{url: MTPage7},{url: MTPage8},{url: MTPage9},{url: MTPage10},{url: MTPage11},{url: MTPage12}]
+  },{
+    CandyCrush:[{url: candyPage1},{url: candyPage2},{url: candyPage3},{url: candyPage4}]
+  }];
 
   // for laptop devices
   // window.addEventListener("scroll", function (e) {
@@ -36,10 +60,11 @@ function App() {
 
   return (
     <div className="text-4xl cards">
-      {arr.map((Element,i) => {
-        console.log(<Element/>)
+      {projectArr.map((Element,i) => {
+        console.log(<Element />)
         return (
           <Element
+            arr={projectObj[i][Object.keys(projectObj[i])] }
             key={i}
             className=" relative rounded-3xl border-red-800 border-4"
             
