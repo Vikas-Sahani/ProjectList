@@ -1,5 +1,26 @@
-// for laptop devices
+import candyPage1 from "./images/CandyCrushImages/Page1.png";
+import candyPage2 from "./images/CandyCrushImages/Page2.png";
+import candyPage3 from "./images/CandyCrushImages/Page3.png";
+import candyPage4 from "./images/CandyCrushImages/Page4.png";
 
+// MT => Match-Trio
+import MTPage1 from "./images/MatchTrioImages/Page1.png";
+import MTPage2 from "./images/MatchTrioImages/Page2.png";
+import MTPage3 from "./images/MatchTrioImages/Page3.png";
+import MTPage4 from "./images/MatchTrioImages/Page4.png";
+import MTPage5 from "./images/MatchTrioImages/Page5.png";
+import MTPage6 from "./images/MatchTrioImages/Page6.png";
+import MTPage7 from "./images/MatchTrioImages/Page7.png";
+import MTPage8 from "./images/MatchTrioImages/Page8.png";
+import MTPage9 from "./images/MatchTrioImages/Page9.png";
+import MTPage10 from "./images/MatchTrioImages/Page10.png";
+import MTPage11 from "./images/MatchTrioImages/Page11.png";
+import MTPage12 from "./images/MatchTrioImages/Page12.png";
+
+const candyImages = [candyPage1, candyPage2, candyPage3, candyPage4];
+const MTImages = [MTPage1, MTPage2, MTPage3, MTPage4, MTPage5, MTPage6, MTPage7, MTPage8, MTPage9,MTPage10, MTPage11, MTPage12];
+
+// for laptop devices
 // console.log(window.innerHeight=714+" "+window.innerWidth=1536)
 
 function App() {
@@ -25,7 +46,7 @@ function App() {
 
   return (
     <div className="text-4xl">
-      {arr.map((el) => {
+      {arr.map((el,i) => {
         return (
           <div
             key={el}
@@ -43,6 +64,7 @@ function App() {
             }}
           >
             hello {el}
+            <img src={MTImages[i]}  className="h-[90%] w-[100%]"></img>
           </div>
         );
       })}
