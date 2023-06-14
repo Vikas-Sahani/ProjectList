@@ -19,9 +19,8 @@ import MTPage10 from "../images/MatchTrioImages/Page10.png";
 import MTPage11 from "../images/MatchTrioImages/Page11.png";
 import MTPage12 from "../images/MatchTrioImages/Page12.png";
 
-
-function Slides(props) {
-  const slides =[{url: MTPage1},{url: MTPage2},{url: MTPage3},{url: MTPage4},{url: MTPage5},{url: MTPage6},{url: MTPage7},{url: MTPage8},{url: MTPage9},{url: MTPage10},{url: MTPage11},{url: MTPage12}];
+function MTSlides(props) {
+  const slides = [{url: MTPage1},{url: MTPage2},{url: MTPage3},{url: MTPage4},{url: MTPage5},{url: MTPage6},{url: MTPage7},{url: MTPage8},{url: MTPage9},{url: MTPage10},{url: MTPage11},{url: MTPage12}];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,13 +41,10 @@ function Slides(props) {
   };
 
   return (
-    <div className='max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group' style={props.styleObj}>
+    <div className='m-auto py-16 group' style={props.style}>
       <div
-        style={{ backgroundImage: `url(${ 
-          slides[currentIndex].url
-          
-        })` }}
-        className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+        style={{ backgroundImage: `url(${ slides[currentIndex].url})`, width:'75%' }}
+        className='w-full h-full relative left-[13%] rounded-2xl bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}
       <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
@@ -73,4 +69,4 @@ function Slides(props) {
   );
 }
 
-export default Slides;
+export default MTSlides;
