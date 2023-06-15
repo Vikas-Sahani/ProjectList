@@ -1,18 +1,23 @@
+// for sliding image in React + tailwind => https://www.youtube.com/watch?v=tXlZCW26bto
+
 import React, { useState } from 'react';
 // npm install react-icons --save => run this command to add icons in React project
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-
-import candyPage1 from "../images/CandyCrushImages/Page1.png";
-import candyPage2 from "../images/CandyCrushImages/Page2.png";
-import candyPage3 from "../images/CandyCrushImages/Page3.png";
-import candyPage4 from "../images/CandyCrushImages/Page4.png";
+// MT => Match-Trio
+import ITPPage1 from "../images/IndianTravelingPlaces/Page1.png";
+import ITPPage2 from "../images/IndianTravelingPlaces/Page2.png";
+import ITPPage3 from "../images/IndianTravelingPlaces/Page3.png";
+import ITPPage4 from "../images/IndianTravelingPlaces/Page4.png";
+import ITPPage5 from "../images/IndianTravelingPlaces/Page5.png";
+import ITPPage6 from "../images/IndianTravelingPlaces/Page6.png";
+import ITPPage7 from "../images/IndianTravelingPlaces/Page7.png";
+import ITPPage8 from "../images/IndianTravelingPlaces/Page8.png";
 
 
 function Slides(props) {
-  const slides = [{url: candyPage1},{url: candyPage2},{url: candyPage3},{url: candyPage4}]
-
+  const slides = [{url: ITPPage1},{url: ITPPage2},{url: ITPPage3},{url: ITPPage4},{url: ITPPage5},{url: ITPPage6},{url: ITPPage7},{url: ITPPage8}]
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -34,7 +39,7 @@ function Slides(props) {
   return (
     <div className='m-auto py-16 group' style={props.style}>
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})`, width:'75%' }}
+        style={{ backgroundImage: `url(${ slides[currentIndex].url})`, width:'75%' }}
         className='w-full h-full relative left-[13%] rounded-2xl bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}

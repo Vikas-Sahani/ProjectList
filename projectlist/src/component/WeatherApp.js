@@ -1,17 +1,26 @@
+// for sliding image in React + tailwind => https://www.youtube.com/watch?v=tXlZCW26bto
+
 import React, { useState } from 'react';
 // npm install react-icons --save => run this command to add icons in React project
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-
-import candyPage1 from "../images/CandyCrushImages/Page1.png";
-import candyPage2 from "../images/CandyCrushImages/Page2.png";
-import candyPage3 from "../images/CandyCrushImages/Page3.png";
-import candyPage4 from "../images/CandyCrushImages/Page4.png";
-
+// MT => Match-Trio
+import MTPage1 from "../images/MatchTrioImages/Page1.png";
+import MTPage2 from "../images/MatchTrioImages/Page2.png";
+import MTPage3 from "../images/MatchTrioImages/Page3.png";
+import MTPage4 from "../images/MatchTrioImages/Page4.png";
+import MTPage5 from "../images/MatchTrioImages/Page5.png";
+import MTPage6 from "../images/MatchTrioImages/Page6.png";
+import MTPage7 from "../images/MatchTrioImages/Page7.png";
+import MTPage8 from "../images/MatchTrioImages/Page8.png";
+import MTPage9 from "../images/MatchTrioImages/Page9.png";
+import MTPage10 from "../images/MatchTrioImages/Page10.png";
+import MTPage11 from "../images/MatchTrioImages/Page11.png";
+import MTPage12 from "../images/MatchTrioImages/Page12.png";
 
 function Slides(props) {
-  const slides = [{url: candyPage1},{url: candyPage2},{url: candyPage3},{url: candyPage4}]
+  const slides = [{url: MTPage1},{url: MTPage2},{url: MTPage3},{url: MTPage4},{url: MTPage5},{url: MTPage6},{url: MTPage7},{url: MTPage8},{url: MTPage9},{url: MTPage10},{url: MTPage11},{url: MTPage12}];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +43,7 @@ function Slides(props) {
   return (
     <div className='m-auto py-16 group' style={props.style}>
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})`, width:'75%' }}
+        style={{ backgroundImage: `url(${ slides[currentIndex].url})`, width:'75%' }}
         className='w-full h-full relative left-[13%] rounded-2xl bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}

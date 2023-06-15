@@ -1,6 +1,13 @@
 import React from "react";
 import MTSlides from "./component/MTSlides";
 import CandyCrushSlides from "./component/CandyCrushSlides";
+import CalSlide from "./component/Calender";
+import DMSlides from "./component/Dialogs&Motivation";
+import DLBSlides from "./component/DotLine&Boxe";
+import ECSlides from "./component/E-Commerece";
+import ITPSlides from "./component/IndianTravelingPlace";
+import SQLW from "./component/SQLWebsite";
+import WA from "./component/WeatherApp";
 
 // for laptop devices
 // console.log(window.innerHeight=714+" "+window.innerWidth=1536)
@@ -9,7 +16,7 @@ function App() {
   let cnt = 0;
   let width = 500*1.5;
   let height = 300*1.5;
-  const projectArr = [CandyCrushSlides, MTSlides ];
+  const projectArr = [CandyCrushSlides, MTSlides, CalSlide,DMSlides,DLBSlides,ECSlides, ITPSlides, SQLW, WA ];
 
   // for laptop devices
   window.addEventListener("scroll", function (e) {

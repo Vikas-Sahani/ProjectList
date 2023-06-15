@@ -1,18 +1,20 @@
+// for sliding image in React + tailwind => https://www.youtube.com/watch?v=tXlZCW26bto
+
 import React, { useState } from 'react';
 // npm install react-icons --save => run this command to add icons in React project
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-
-import candyPage1 from "../images/CandyCrushImages/Page1.png";
-import candyPage2 from "../images/CandyCrushImages/Page2.png";
-import candyPage3 from "../images/CandyCrushImages/Page3.png";
-import candyPage4 from "../images/CandyCrushImages/Page4.png";
+// MT => Match-Trio
+import ECPage1 from "../images/E-Commerce/Page1.png";
+import ECPage2 from "../images/E-Commerce/Page2.png";
+import ECPage3 from "../images/E-Commerce/Page3.png";
+import ECPage4 from "../images/E-Commerce/Page4.png";
+import ECPage5 from "../images/E-Commerce/Page5.png";
 
 
 function Slides(props) {
-  const slides = [{url: candyPage1},{url: candyPage2},{url: candyPage3},{url: candyPage4}]
-
+  const slides = [{url: ECPage1},{url: ECPage2},{url: ECPage3},{url: ECPage4},{url: ECPage5}]
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -34,7 +36,7 @@ function Slides(props) {
   return (
     <div className='m-auto py-16 group' style={props.style}>
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})`, width:'75%' }}
+        style={{ backgroundImage: `url(${ slides[currentIndex].url})`, width:'75%' }}
         className='w-full h-full relative left-[13%] rounded-2xl bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}
