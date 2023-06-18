@@ -25,7 +25,7 @@ function App() {
       cards[i].style.transform = `translate(${
         -Math.floor(window.scrollY) * 6.4
       }px,
-        ${-Math.floor(window.scrollY) * 2}px)`;
+        ${-Math.floor(window.scrollY) * 3.2}px)`;
     }
   });
 
