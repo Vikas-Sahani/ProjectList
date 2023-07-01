@@ -3,7 +3,7 @@ import MTSlides from "./component/MTSlides";
 import CandyCrushSlides from "./component/CandyCrushSlides";
 import CalSlide from "./component/Calender";
 import DMSlides from "./component/Dialogs&Motivation";
-import DLBSlides from "./component/DotLine&Boxe";
+import DLBSlides from "./component/DotLine&Boxes";
 import ECSlides from "./component/E-Commerece";
 import ITPSlides from "./component/IndianTravelingPlace";
 import SQLW from "./component/SQLWebsite";
