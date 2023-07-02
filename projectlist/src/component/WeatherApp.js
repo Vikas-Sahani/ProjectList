@@ -6,21 +6,10 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
 // MT => Match-Trio
-import MTPage1 from "../images/MatchTrioImages/Page1.png";
-import MTPage2 from "../images/MatchTrioImages/Page2.png";
-import MTPage3 from "../images/MatchTrioImages/Page3.png";
-import MTPage4 from "../images/MatchTrioImages/Page4.png";
-import MTPage5 from "../images/MatchTrioImages/Page5.png";
-import MTPage6 from "../images/MatchTrioImages/Page6.png";
-import MTPage7 from "../images/MatchTrioImages/Page7.png";
-import MTPage8 from "../images/MatchTrioImages/Page8.png";
-import MTPage9 from "../images/MatchTrioImages/Page9.png";
-import MTPage10 from "../images/MatchTrioImages/Page10.png";
-import MTPage11 from "../images/MatchTrioImages/Page11.png";
-import MTPage12 from "../images/MatchTrioImages/Page12.png";
+import MTPage1 from "../images/WeatherApp/Page1.png";
 
 function Slides(props) {
-  const slides = [{url: MTPage1},{url: MTPage2},{url: MTPage3},{url: MTPage4},{url: MTPage5},{url: MTPage6},{url: MTPage7},{url: MTPage8},{url: MTPage9},{url: MTPage10},{url: MTPage11},{url: MTPage12}];
+  const slides = [{url: MTPage1}];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
